@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+message Certificate {
+    string version = 1;
+    string algorithm = 2;
+    
+    string issuer_name = 3;
+    bytes issuer_ID = 4;
+    string issuer_domain = 5;
+    string subject_name = 6;
+    bytes subject_ID = 7;
+    string subject_domain = 8;
+    string name = 9;
+    bytes id = 10;
+    string domain = 11;
+    bytes public_key = 12;
+    double not_valid_before = 13;
+    double not_valid_after = 14;
+    repeated Element extension = 15;
+    
+    optional bytes signature = 16;
+}
+
+message Element {
+    string key = 1;
+    string value = 2;
+}

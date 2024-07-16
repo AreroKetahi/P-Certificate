@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+message Key {
+    string version = 1;
+    string algorithm = 2;
+    int32 key_size = 3;
+    bool symmetry = 4;
+    Transparency transparency = 5;
+    
+    bytes content = 6;
+    
+    string digest = 7;
+    bytes id = 8;
+}
+
+enum Transparency {
+    PRIVATE = 0;
+    PUBLIC = 1;
+}

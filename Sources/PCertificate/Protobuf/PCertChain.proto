@@ -1,0 +1,6 @@
+syntax = "proto3";
+import "PCert.proto";
+
+message CertificateChain {
+    repeated Certificate chain = 1;
+}
