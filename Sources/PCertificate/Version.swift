@@ -81,3 +81,15 @@ extension Version {
         }
     }
 }
+
+extension Version: Codable {
+    public func encode(to encoder: any Encoder) throws {
+        var container = encoder.singleValueContainer()
+        try container.encode(self.description)
+    }
+    
+    public init(from decoder: any Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        self = try .init(stringLiteral: container.decode(String.self))
+    }
+}

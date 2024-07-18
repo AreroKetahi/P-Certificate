@@ -42,3 +42,19 @@ public struct Domain: ExpressibleByStringLiteral, Sendable, Hashable, CustomStri
         domains.joined(separator: ".")
     }
 }
+
+extension Domain: Codable {
+    public func encode(to encoder: any Encoder) throws {
+        var container = encoder.singleValueContainer()
+        try container.encode(self.domains.description)
+    }
+    
+    public enum CodingKeys: CodingKey {
+        case domains
+    }
+    
+    public init(from decoder: any Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        self = try .init(stringLiteral: container.decode(String.self))
+    }
+}

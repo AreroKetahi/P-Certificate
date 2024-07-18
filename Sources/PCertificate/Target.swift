@@ -10,7 +10,7 @@ import CryptoKit
 import _CryptoExtras
 
 /// Subject target payload
-public struct Target: Sendable, Hashable {
+public struct Target: Sendable, Hashable, Codable {
     var name: String
     var id: UUID
     var domain: Domain
