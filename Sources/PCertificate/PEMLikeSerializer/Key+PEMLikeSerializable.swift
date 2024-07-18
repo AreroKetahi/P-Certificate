@@ -8,7 +8,6 @@
 
 extension Key {
     /// Serialize certificate to PEM like string.
-    /// - Parameter privateKey: Private key to sign this certificate
     /// - Returns: PEM like string
     public func pemLikeString() throws -> String {
         let data = try self.serialize()
