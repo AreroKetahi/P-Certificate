@@ -32,6 +32,11 @@ let package = Package(
                 .product(name: "Crypto", package: "swift-crypto"),
                 .product(name: "_CryptoExtras", package: "swift-crypto"),
             ],
+            exclude: [
+                "Protobuf/PCert.proto",
+                "Protobuf/PCertChain.proto",
+                "Protobuf/PKey.proto",
+            ],
             swiftSettings: .swiftSettings
         ),
         .testTarget(
