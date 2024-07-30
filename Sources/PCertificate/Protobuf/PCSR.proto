@@ -1,0 +1,18 @@
+syntax = "proto3";
+import "PCert.proto";
+
+message CertificateSigningRequest {
+    string version = 1;
+    
+    string subject_name = 2;
+    bytes subject_ID = 3;
+    string subject_domain = 4;
+    
+    string name = 5;
+    bytes id = 6;
+    string domain = 7;
+    
+    bytes public_key = 8;
+    
+    repeated Element extension = 9;
+}
