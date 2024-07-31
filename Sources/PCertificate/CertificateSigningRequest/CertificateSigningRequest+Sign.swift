@@ -67,10 +67,10 @@ extension CertificateSigningRequest {
         notValidBefore: Date,
         notValidAfter: Date,
         using privateKey: PublicKey.PrivateKey,
-        transaction: (_ csr: inout CertificateSigningRequest) -> Void
+        transaction: (_ csr: inout CertificateSigningRequest) throws -> Void
     ) throws -> Certificate<PublicKey> {
         var csr = self
-        transaction(&csr)
+        try transaction(&csr)
         return try csr.sign(
             issuerName: issuerName,
             issuerID: issuerID,
