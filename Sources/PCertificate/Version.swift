@@ -10,7 +10,7 @@ import Foundation
 /// P-Certificate semantic version implementation
 ///
 /// See also [https://semver.org](https://semver.org) for more detail about sermantic versioning.
-public struct Version: ExpressibleByStringLiteral, CustomStringConvertible, Sendable, Hashable, Equatable {
+public struct Version: ExpressibleByStringInterpolation, CustomStringConvertible, Sendable, Hashable, Equatable {
     var major: Int
     var minor: Int
     var patch: Int

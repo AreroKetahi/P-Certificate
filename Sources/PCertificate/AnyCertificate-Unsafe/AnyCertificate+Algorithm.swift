@@ -49,7 +49,7 @@ extension AnyCertificate {
     }
 }
 
-extension AnyCertificate.Algorithm: ExpressibleByStringLiteral {
+extension AnyCertificate.Algorithm: ExpressibleByStringInterpolation {
     public init(stringLiteral value: String) {
         let splitted = value.split(separator: ".")
         if splitted.count == 1 {

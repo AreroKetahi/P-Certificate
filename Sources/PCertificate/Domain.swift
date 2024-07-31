@@ -9,7 +9,7 @@ import Foundation
 
 /// Domain that P-Certificate Use.
 @dynamicCallable
-public struct Domain: ExpressibleByStringLiteral, Sendable, Hashable, CustomStringConvertible {
+public struct Domain: ExpressibleByStringInterpolation, Sendable, Hashable, CustomStringConvertible {
     var domains: [String]
     
     public init(stringLiteral value: String) {
