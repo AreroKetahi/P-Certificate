@@ -52,7 +52,7 @@ extension Version {
     /// P-Certificate version 1.0.0
     ///
     /// The minor and patch version are been omit.
-    static let v1: Self = "1.0.0"
+    public static let v1: Self = "1.0.0"
 }
 
 extension Version {
