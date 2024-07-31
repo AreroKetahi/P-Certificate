@@ -20,7 +20,7 @@ public struct Target: Sendable, Hashable, Codable {
     ///   - name: Target name
     ///   - id: Target Identifier
     ///   - domain: Target domain
-    init(name: String, id: UUID, domain: Domain) {
+    public init(name: String, id: UUID, domain: Domain) {
         self.name = name
         self.id = id
         self.domain = domain
