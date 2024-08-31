@@ -40,7 +40,8 @@ extension CertificateSigningRequest {
             domain: self.domain,
             publicKey: self.publicKey,
             notValidBefore: notValidBefore,
-            notValidAfter: notValidAfter
+            notValidAfter: notValidAfter,
+            extension: self.extension
         )
 
         try certificate.sign(with: privateKey)
