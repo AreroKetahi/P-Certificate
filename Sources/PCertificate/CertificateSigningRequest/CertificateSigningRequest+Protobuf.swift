@@ -37,8 +37,8 @@ extension CertificateSigningRequest {
         var csr = PBCertificateSigningRequest()
         
         csr.version = self.version.description
-        csr.subjectName = self.name
-        csr.subjectID = self.id.dataRepresentation
+        csr.subjectName = self.subjectName
+        csr.subjectID = self.subjectID.dataRepresentation
         csr.subjectDomain = self.subjectDomain.description
         csr.name = self.name
         csr.id = self.id.dataRepresentation
