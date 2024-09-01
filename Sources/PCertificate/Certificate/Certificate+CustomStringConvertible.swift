@@ -33,7 +33,7 @@ extension Certificate: CustomStringConvertible {
             "    \(element.key): \(element.value)"
         }).joined(separator: "\n"))
         
-        Signature Status: \(self.signature == nil ? "No signature" : try! self.verify() ? "Pass" : "Failed")
+        Signature Status: \(self.signature == nil ? "No signature" : "Has signature")
         """
     }
 }

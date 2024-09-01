@@ -8,7 +8,6 @@
 import Foundation
 
 /// Domain that P-Certificate Use.
-@dynamicCallable
 public struct Domain: ExpressibleByStringInterpolation, Sendable, Hashable, CustomStringConvertible {
     var domains: [String]
     
@@ -34,7 +33,7 @@ public struct Domain: ExpressibleByStringInterpolation, Sendable, Hashable, Cust
         }
     }
     
-    func dynamicallyCall(withKeywordArguments: KeyValuePairs<String, String>) -> String {
+    func callAsFunction() -> String {
         return self.description
     }
     
